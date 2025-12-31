@@ -23,3 +23,30 @@ for(let order of orders) {
 }
 
 console.log(currentOrder)
+
+
+// Extra Discussion 
+// We have new type called Unknown which can be use in the place of Any 
+
+// Example of Any
+let value1: any;
+
+value1 = 10;
+value1 = "hello";
+value1 = true;
+
+value1.toUpperCase(); // ✅ No error (even if value is NOT a string)
+value1();             // ✅ No error
+value1.foo.bar();     // ✅ No error
+
+
+// Example of Unknown
+let value: unknown;
+
+value = 10;
+value = "hello";
+value = true;
+
+
+// value.toUpperCase(); // ❌ Error
+// value();             // ❌ Error
